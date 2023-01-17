@@ -12,7 +12,7 @@ h1 {
 
 .card {
     color: white;
-    border-radius: 3%;
+    /* border-radius: 3%; */
 
     margin: 3rem 0rem 5rem;
     /* backdrop-filter: blur(3px); */
