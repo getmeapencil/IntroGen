@@ -1,34 +1,25 @@
 $(document).ready(function() {
+    let valid = false;
     $("#refresh-button").click(function() {
         location.reload();
     });
     $("#generate-paragraph").click(function(event) {
+        event.preventDefault();
         (() => {
-            'use strict'
-          
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            const forms = document.querySelectorAll('.needs-validation')
-          
-            // Loop over them and prevent submission
-            Array.from(forms).forEach(form => {
-              form.addEventListener('submit', event => {
-                if (!form.checkValidity()) {
-                  event.preventDefault()
-                  event.stopPropagation()
-                  $("#output").hide();
-                  $("#copy-button").hide();
-                }
-                
-                event.preventDefault();
-                form.classList.add('was-validated')
-              }, false)
-            })
+            const form = document.querySelectorAll('.needs-validation')[0]
+            if (!form.checkValidity()) {
+                valid=false;
+                $("#output").hide();
+                $("#copy-button").hide();
+                event.stopPropagation(); 
+            }
+            else {
+                valid = true;
+            }
+            form.classList.add('was-validated')
         })()
 
-        if ($("form").hasClass("was-validated")) {
-
-            //console.log("1st\n");
-
+        if (valid) {
             var name = $("#name").val();
             var college = $("#college").val();
             var branch = $("#branch").val();
@@ -44,18 +35,12 @@ $(document).ready(function() {
                 "Greetings @everyone! \nI'm **" + name + "** from college **" + college + "**. \nI'm enrolled in session **" + session1 + " - " + session2 + "** and pursuing my degree in **" + branch + "**. \n\nThe quote I'll like to share with y'all is: \n> *" + quote + "*\n\nNow let's vibe to some music: \n" + song,
                 "Hey there @everyone! Namaste! \nI'm **" + name + "**, a engineer in making from college **" + college + "**. \nI'm doing my graduation from **" + branch + "** department in the session **" + session1 + " - " + session2 + "**. \n\nIf you'd like to read more, read this: \n> *" + quote + "*\n\nAnd in case you've already had enough, listen to: \n" + song,
             ];
-            
-            //console.log("2nd\n");
-
+    
             var i = parseInt((Math.random() * paragraphs.length), 10);
             $("#output").val(paragraphs[i]);
-    
-            //console.log("3rd\n");
 
             $("#output").show();
             $("#copy-button").show();
-           
-            //console.log("4th\n");
         }       
     });
 
