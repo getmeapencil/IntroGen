@@ -1,0 +1,85 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>IntroForm</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Poppins&display=swap" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center" >
+                <div class="col-lg-6 col-md-8 col-sm-12 mx-auto" >
+                    <div class="card">
+                        <div class="card-header text-white text-center">
+                            <h1>INTRO GEN</h1>
+                        </div>
+                        <div class="card-body" style="padding-bottom: 0px;">
+                            <form action="" class="needs-validation" novalidate>
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Eg. Alan Turing" required>
+                                    <div class="invalid-feedback">Please enter your name!</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="college">College:</label>
+                                    <input type="text" class="form-control" id="college" placeholder="Eg. King's College, Cambridge" required>
+                                    <div class="invalid-feedback">Please enter your college name!</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="branch">Department:</label>
+                                    <input type="text" class="form-control" id="branch" placeholder="Eg. Mathematics" required>
+                                    <div class="invalid-feedback">Please enter your department!</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="session">Academic Session:</label>
+                                    <div>
+                                        <input type="number" class="form-control" id="session1" placeholder="Eg. 1931" required>
+                                         -
+                                        <input type="number" class="form-control" id="session2" placeholder="1934" required>
+                                        <div class="invalid-feedback">Please enter your session!</div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <label for="quote">Quote you like:</label>
+                                    <input type="text" class="form-control" id="quote" placeholder="Eg. Turn your wounds into wisdom." required>
+                                    <div class="invalid-feedback">You are required to share a quote!</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="song">Link of a song you like:</label>
+                                    <input type="text" class="form-control" id="song" placeholder="Eg. https://youtu.be/kr6WTOCbDTw" required>
+                                    <div class="invalid-feedback">You are required to share a song!</div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary" id="generate-paragraph">Generate Introduction</button>
+                                    <button type="button" class="btn btn-secondary" id="refresh-button">Reset</button>
+                               </div>
+                                <div class="form-group">
+                                    <textarea id="output" style="display: none" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-secondary" id="copy-button" style="display: none">Copy</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer text-white text-center" style="font-size: 0.75rem;">
+                            Made with stress by <a href="https://twitter.com/getmeapencil" target="_blank"> getmeapencil </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
