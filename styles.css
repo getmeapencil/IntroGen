@@ -1,7 +1,11 @@
 body {
-    background-image: url(res/bg.jpg);
-    background-size: cover;
-    background-position: center center;
+    background-color: rgba(0, 0, 0, 1);
+    background-image: radial-gradient(
+      rgba(256, 256, 256, 0.2) 1px, 
+      transparent 1px
+    );
+    background-position: 50% 50%;
+    background-size: 1.1rem 1.1rem;
     background-attachment: fixed;
     font-family: "Poppins" , sans-serif;
 }
