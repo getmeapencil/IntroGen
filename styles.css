@@ -1,13 +1,25 @@
 body {
     background-color: rgba(0, 0, 0, 1);
     background-image: radial-gradient(
-      rgba(256, 256, 256, 0.2) 1px, 
+      rgba(14, 178, 78, 0.5) 0.5px, 
       transparent 1px
     );
     background-position: 50% 50%;
     background-size: 1.1rem 1.1rem;
     background-attachment: fixed;
     font-family: "Poppins" , sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(14, 178, 78, 0.2); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(14, 178, 78, 0.5);  
 }
 
 h1 {
